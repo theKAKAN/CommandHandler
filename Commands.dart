@@ -1,5 +1,6 @@
 import "package:logging/logging.dart";
-import "Command/Command.dart";
+export "Command/Command.dart";
+export "Command/ICommand.dart";
 
 /// The main command handler
 class Commands {
