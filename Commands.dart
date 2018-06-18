@@ -25,8 +25,8 @@ class Commands {
 		// If registry contains multiple commands 
 		// with identical name - run the first one.
 		var matchedCommand = _commands
-								.where((i) => message.startsWith(i.name))
-								.first;
+					.where((i) => message.startsWith(i.name))
+					.first;
 
 		if( matchedCommand.isAdmin && _admins != null &&
 			_admins.any( (i) => (i == author) ) ) {}
@@ -34,7 +34,7 @@ class Commands {
 
 		try {
 			await matchedCommand.run(message);
-		_	_log.info("Dispatched command successfully");
+			_log.info("Dispatched command successfully");
 		}
 		catch(e){
 			_log.warn("Error in Dispatching command.");
